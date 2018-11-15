@@ -91,11 +91,6 @@ class LargeFactorial {
 							resultString +=String.valueOf(res[i]);
 					
 						}
-						System.out.println("ELSE X: "+x);
-						System.out.println("ELSE res_size: "+res_size);
-						System.out.println("ELSE digits: "+digits);
-						System.out.println("ELSE resultString "+resultString);
-						System.out.println("ELSE userInputFactorial: "+userInputFactorial);
 						
 						if( userInputFactorial.equals(resultString))
 						{	
@@ -163,17 +158,18 @@ class LargeFactorial {
 		
 		if(digitsNumber < 5737 )//2000! Max + 1 digits Number
 		{
-			int Fact = factorial(digitsNumber, 2000);//2000factorial is Max if you need more change digits condition and this 2000
-			if(Fact !=0)
+			int indexFactFunction = factorial(digitsNumber, 2000);//2000factorial is Max if you need more change digits condition and this 2000
+			if(indexFactFunction !=0)
 			{
 				System.out.println("The n: ");
 				System.out.println(resultString);
 			}
-			else if (digitsNumber != 1)
+			
+		}
+		else if (digitsNumber != 1)
 			{
 				System.out.println("The digits number is much then 2000! Factorial");
 			}
-		}
 		
 	}
 
