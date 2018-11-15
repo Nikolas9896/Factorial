@@ -22,7 +22,7 @@ import java.util.Scanner;
 class LargeFactorial { 
       
     static String resultString = "";
-	static String text1 = "";
+	static String userInputFactorial = "";
 	//*************factorial********************
 	/*This function finds factorial of small and large numbers.
 	***Return 0 --------if it's not integer factorial 
@@ -35,18 +35,18 @@ class LargeFactorial {
 		if ( digits == 1 )
 			{
 				int resultInt = 1;
-				if(text1.equals("0") || text1.equals("1") )
+				if(userInputFactorial.equals("0") || userInputFactorial.equals("1") )
 				{
 					resultString = "1";
 					return resultInt;
 				}
-				else if(text1.equals("2"))
+				else if(userInputFactorial.equals("2"))
 				{
 					resultString = "2";
 					resultInt+=1;
 					return resultInt;
 				}
-				else if(text1.equals("6"))
+				else if(userInputFactorial.equals("6"))
 				{
 					resultString = "3";
 					resultInt+=2;
@@ -75,7 +75,7 @@ class LargeFactorial {
 						resultString +=String.valueOf(res[i]);
 					
 					}
-					if(text1.equals(resultString))
+					if(userInputFactorial.equals(resultString))
 					{
 						resultString = String.valueOf(x);
 						return x;
@@ -131,7 +131,27 @@ class LargeFactorial {
 	public static void main(String[] args) 
 		
 	{
-		;				
+		System.out.println("Task 2: Factorial 2000 Max");
+		System.out.println("Input number of factorial(max digits number 5736) and get you n!");
+		
+		Scanner factorialLargeNumber = new Scanner(System.in);
+		userInputFactorial = factorialLargeNumber.next();
+		int digitsNumber = userInputFactorial.length();
+		
+		if(digitsNumber < 5737 )//2000! Max + 1 digits Number
+		{
+			int Fact = factorial(digitsNumber, 2000);//2000factorial is Max if you need more change digits condition and this 2000
+			if(Fact !=0)
+			{
+				System.out.println("The n: ");
+				System.out.println(resultString);
+			}
+			else
+			{
+				System.out.print("The digits number is much then 2000! Factrorial");
+			}
+		}
+		
 	}
 
 }
