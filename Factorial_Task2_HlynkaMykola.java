@@ -21,10 +21,13 @@ Output example #1
 import java.util.Scanner;
 class LargeFactorial { 
       
-    // This function finds factorial of  
-    // large numbers and prints them
-	static String text1 = "";//for input value of Factorial
-	static String resultString = "";//for compare value of Factorial
+    static String resultString = "";
+	static String text1 = "";
+	//*************factorial********************
+	/*This function finds factorial of small and large numbers.
+	Return 0 if it's not integer factorial 
+	Return int n if n is your factorial max value = 2000!
+	*/
     static int factorial(int digits, int n) 
     { 
         int res[] = new int[digits]; //5736 max digits for 2000! factorial.
@@ -35,7 +38,34 @@ class LargeFactorial {
         int res_size = 1;
 		
         // Apply simple factorial formula  
-        // n! = 1 * 2 * 3 * 4...*n 
+        // n! = 1 * 2 * 3 * 4...*n
+		if ( digits == 1 )
+			{
+				int resultInt = 1;
+				if(text1.equals("0") || text1.equals("1") )
+				{
+					resultString = "1";
+					return resultInt;
+				}
+				else if(text1.equals("2"))
+				{
+					resultString = "2";
+					resultInt+=1;
+					return resultInt;
+				}
+				else if(text1.equals("6"))
+				{
+					resultString = "3";
+					resultInt+=2;
+					return resultInt;
+				}
+				else
+				{
+					System.out.print("The number is not Factrorial");
+					return 0;
+				}
+			
+		}		
         for (int x = 2; x <= n; x++) 
 		{
 			System.out.print(" X: " +x );
