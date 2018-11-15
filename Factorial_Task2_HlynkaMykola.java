@@ -25,18 +25,11 @@ class LargeFactorial {
 	static String text1 = "";
 	//*************factorial********************
 	/*This function finds factorial of small and large numbers.
-	Return 0 if it's not integer factorial 
-	Return int n if n is your factorial max value = 2000!
+	***Return 0 --------if it's not integer factorial 
+	***Return int n --- if n is integer factorial, max value = 2000! The number of digits in 2000 factorial is 5736.
 	*/
     static int factorial(int digits, int n) 
     { 
-        int res[] = new int[digits]; //5736 max digits for 2000! factorial.
-		
-		
-        // Initialize result 
-        res[0] = 1; 
-        int res_size = 1;
-		
         // Apply simple factorial formula  
         // n! = 1 * 2 * 3 * 4...*n
 		if ( digits == 1 )
@@ -67,7 +60,10 @@ class LargeFactorial {
 			
 		}
 		else
-		{
+		{	
+			int res[] = new int[digits]; //5736 max digits for 2000! factorial.
+			res[0] = 1; 
+			int res_size = 1;
 			for (int x = 2; x <= n; x++) 
 			{
 				System.out.print(" X: " +x );
