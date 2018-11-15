@@ -65,43 +65,37 @@ class LargeFactorial {
 					return 0;
 				}
 			
-		}		
-        for (int x = 2; x <= n; x++) 
+		}
+		else
 		{
-			System.out.print(" X: " +x );
-			res_size = multiply(x, res, res_size);
-			if( res_size == digits)
-			{	
-				for (int i = res_size - 1; i >= 0; i--) 
-				{
-					System.out.print(res[i]);
-					resultString +=String.valueOf(res[i]);
-				
-				}
-				if(text1.equals(resultString))
-				{
-					resultString = String.valueOf(x);
-					return x;
-				}
-				else
-				{
+			for (int x = 2; x <= n; x++) 
+			{
+				System.out.print(" X: " +x );
+				res_size = multiply(x, res, res_size);
+				if( res_size == digits)
+				{	
+					for (int i = res_size - 1; i >= 0; i--) 
+					{
+						System.out.print(res[i]);
+						resultString +=String.valueOf(res[i]);
 					
-					System.out.print("The number isnot Factrorial");
-					return 0;
+					}
+					if(text1.equals(resultString))
+					{
+						resultString = String.valueOf(x);
+						return x;
+					}
+					else
+					{
+						
+						System.out.print("The number isnot Factrorial");
+						return 0;
+					}
 				}
 			}
 		}
-return 0;
-		
-       // for (int i = res_size - 1; i >= 0; i--) 
-		//{
-			//System.out.print(res[i]);
-		//	resultString +=String.valueOf(res[i]);
-			
-			
-		//}
-		
-		//return text1.equals(resultString);_____________________________________
+		return 0;
+		       
     } 
       
     // This function multiplies x with the number 
@@ -112,7 +106,7 @@ return 0;
     // and returns the new value of res_size 
     static int multiply(int x, int res[], int res_size) 
     { 
-        ;
+        return 0;
     } 
 	
 
@@ -120,5 +114,6 @@ return 0;
 		
 	{
 		;				
+	}
 
 }
