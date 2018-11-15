@@ -54,14 +54,14 @@ class LargeFactorial {
 				}
 				else
 				{
-					System.out.print("The number is not Factrorial");
+					System.out.print("The number is not Factorial");
 					return 0;
 				}
 			
 		}
 		else
 		{	
-			int res[] = new int[digits]; //5736 max digits for 2000! factorial.
+			int res[] = new int[5736]; //5736 max digits for 2000! factorial.
 			res[0] = 1; 
 			int res_size = 1;
 			for (int x = 2; x <= n; x++) 
@@ -71,19 +71,42 @@ class LargeFactorial {
 				{	
 					for (int i = res_size - 1; i >= 0; i--) 
 					{
-						System.out.print(res[i]);
+						
 						resultString +=String.valueOf(res[i]);
 					
 					}
 					if(userInputFactorial.equals(resultString))
-					{
+					{						
 						resultString = String.valueOf(x);
 						return x;
 					}
 					else
 					{
+						x+=1;
+						res_size = multiply(x, res, res_size);
+						resultString = "";
+						for (int i = res_size - 1; i >= 0; i--) 
+						{
 						
-						System.out.print("The number isnot Factrorial");
+							resultString +=String.valueOf(res[i]);
+					
+						}
+						System.out.println("ELSE X: "+x);
+						System.out.println("ELSE res_size: "+res_size);
+						System.out.println("ELSE digits: "+digits);
+						System.out.println("ELSE resultString "+resultString);
+						System.out.println("ELSE userInputFactorial: "+userInputFactorial);
+						
+						if( userInputFactorial.equals(resultString))
+						{	
+															
+									resultString = String.valueOf(x);
+									System.out.print("X: "+x);
+									return x;
+							
+						}	
+						
+						System.out.print("The number is not Factorial");
 						return 0;
 					}
 				}
@@ -146,9 +169,9 @@ class LargeFactorial {
 				System.out.println("The n: ");
 				System.out.println(resultString);
 			}
-			else
+			else if (digitsNumber != 1)
 			{
-				System.out.print("The digits number is much then 2000! Factrorial");
+				System.out.println("The digits number is much then 2000! Factorial");
 			}
 		}
 		
