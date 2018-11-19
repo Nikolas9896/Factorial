@@ -96,7 +96,6 @@ class LargeFactorial {
 						{	
 															
 									resultString = String.valueOf(x);
-									System.out.print("X: "+x);
 									return x;
 							
 						}	
